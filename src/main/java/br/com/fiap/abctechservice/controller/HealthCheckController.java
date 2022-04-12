@@ -20,7 +20,7 @@ public class HealthCheckController {
     @GetMapping("/version")
     public ResponseEntity<String> version() {
         final var properties = new Properties();
-        final var is = getClass().getClassLoader().getResourceAsStream("application.yaml");
+        final var is = getClass().getClassLoader().getResourceAsStream("application.yml");
         try {
             properties.load(is);
         } catch (IOException e) {
