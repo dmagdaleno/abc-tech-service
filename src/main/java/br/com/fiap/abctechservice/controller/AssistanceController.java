@@ -3,6 +3,7 @@ package br.com.fiap.abctechservice.controller;
 import br.com.fiap.abctechservice.model.Assistance;
 import br.com.fiap.abctechservice.service.AssistanceService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,6 +18,7 @@ public class AssistanceController {
         this.service = service;
     }
 
+    @GetMapping
     public ResponseEntity<List<Assistance>> getAssists() {
         return ResponseEntity.ok(service.getAssists());
     }
